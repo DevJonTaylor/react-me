@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="iconLeftSlogan">
+ <!---->
+ <defs>
+  <!---->
+ </defs>
+ <defs>
+  <!---->
+ </defs>
+ <defs>
+  <linearGradient gradientTransform="rotate(25)" id="ed75371a-7be8-465d-9b36-c4663b641916" x1="0%" x2="100%" y1="0%" y2="0%">
+   <stop offset="0%" stop-color="#EB6E00"/>
+   <stop offset="100%" stop-color="#F3BCE6"/>
+  </linearGradient>
+ </defs>
+ <defs>
+  <!---->
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <g fill="url(#ed75371a-7be8-465d-9b36-c4663b641916)" id="fe52f8f1-4021-448e-b7aa-2231e1fcad70" transform="matrix(8.51933 0 0 8.48931 173.03 660.006)">
+   <path d="m-9.38,-55.38l8.06,4.47l8.07,-4.47l0,-8.94l-8.07,-4.46l-8.06,4.46l0,8.94z" id="svg_3"/>
+   <path d="m13.05,-75.84l-32,0l0,32l32,0l-5.05,-5.17l-21.9,0l0,-21.66l21.9,0l5.05,-5.17z" id="svg_4"/>
+  </g>
+ </g>
+</svg>
