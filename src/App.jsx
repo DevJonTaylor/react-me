@@ -1,9 +1,8 @@
 import { useEffect } from 'react'
 import logo from './assets/images/logo.svg'
-import card from './assets/images/card.svg'
-import bg from './assets/images/arena.png'
+import cardImg from './assets/images/neuropype.png'
 import { gsap } from 'gsap'
-import './App.css'
+import './App.scss'
 
 
 
@@ -11,21 +10,12 @@ function startGsap() {
 
   //TweenLite.set('.card',{scaleY:0.8, transformOrigin:'center'});
 
-  gsap.to(".card", 1, {
-      boxShadow: '0 0 25px 25px orange'
+  gsap.to(".card-shadow", 1, {
+    boxShadow: 'inset 0 0 25px 100px orange'
   })
 
 }
 
-const style = {
-  backgroundImage: `url("${bg}")`,
-  backgroundPosition: 'bottom',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  height: '100vh',
-  width: '100%',
-
-}
 function App() {
   let isUsed = false
 
@@ -38,9 +28,12 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header" style={ style }>
-        <img alt="my logo" src={logo} />
-        <img alt="project completed" className="card" src={ card } height="250px"/>
+      <header className="App-header">
+        <img alt="my logo" className="logo" src={ logo } />
+        <div className="outer-card">
+          <div className="card"></div>
+          <img src={ cardImg } className="inner-card" alt="Neuropype" />
+        </div>
       </header>
     </div>
   )
