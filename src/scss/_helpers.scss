@@ -1,0 +1,39 @@
+[flex] {
+  display: flex
+}
+
+[flex*="jc-c"] {
+  justify-content: center;
+}
+
+[flex*="jc-sb"] {
+  justify-content: space-between;
+}
+
+[flex*="jc-se"] {
+  justify-content: space-evenly;
+}
+
+[flex*="jc-sa"] {
+  justify-content: space-around;
+}
+
+[flex*="ac-c"] {
+  align-content: center;
+}
+
+[flex*="fd-c"] {
+  flex-direction: column;
+}
+
+[flex*="fd-r"] {
+  flex-direction: row;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}

@@ -1,42 +1,41 @@
-import { useEffect } from 'react'
 import logo from './assets/images/logo.svg'
-import cardImg from './assets/images/neuropype.png'
-import { gsap } from 'gsap'
-import './App.scss'
+import neuropypeImage from './assets/images/neuropype.png'
+import './scss/App.scss'
 
+function ProjectCard({ cardImg, children }) {
+  return (
+    <div className="outer-card">
+      <div className="card"></div>
+      <img src={ cardImg } className="inner-card" alt={ children } />
+      <div className="card-title">{ children }</div>
+    </div>
+  )
+}
 
-
-function startGsap() {
-
-  //TweenLite.set('.card',{scaleY:0.8, transformOrigin:'center'});
-
-  gsap.to(".card-shadow", 1, {
-    boxShadow: 'inset 0 0 25px 100px orange'
-  })
-
+function CardContainer() {
+  return (
+    <main className="card-container" flex="jc-sa ac-c">
+      <ProjectCard cardImg={ neuropypeImage }>Neuropype</ProjectCard>
+      <ProjectCard cardImg={ neuropypeImage }>Neuropype</ProjectCard>
+      <ProjectCard cardImg={ neuropypeImage }>Neuropype</ProjectCard>
+      <ProjectCard cardImg={ neuropypeImage }>Neuropype</ProjectCard>
+      <ProjectCard cardImg={ neuropypeImage }>Neuropype</ProjectCard>
+    </main>
+  )
 }
 
 function App() {
-  let isUsed = false
-
-  useEffect(() => {
-    if(!isUsed) {
-      isUsed = true
-      startGsap()
-    }
-  })
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img alt="my logo" className="logo" src={ logo } />
-        <div className="outer-card">
-          <div className="card"></div>
-          <img src={ cardImg } className="inner-card" alt="Neuropype" />
+      <header className="App-header" flex="fd-c ac-c jc-c">
+        <div className="relative" flex="jc-c ac-c" col="">
+          <img alt="DevJonTaylor" col-7="" className="logo" src={ logo } />
         </div>
+        <CardContainer />
       </header>
     </div>
   )
 }
 
 export default App
+
