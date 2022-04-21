@@ -29,7 +29,7 @@ body {
 
 .App-header {
   @include bgImg($arenaImg, center);
-  min-height: 100vh;
+  height: 100vh;
   font-size: calc(10px + 2vmin);
   .logo {
     z-index: 2;

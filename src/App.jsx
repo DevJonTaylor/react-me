@@ -29,6 +29,7 @@ function App() {
     <div className="App">
       <header className="App-header" flex="fd-c ac-c jc-c">
         <div className="relative" flex="jc-c ac-c" col="">
+          <div className="cover-screen backdrop-blur" col=""></div>
           <img alt="DevJonTaylor" col-7="" className="logo" src={ logo } />
         </div>
         <CardContainer />
