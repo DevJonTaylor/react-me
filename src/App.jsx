@@ -73,7 +73,7 @@ function CardContainer() {
     <main className="card-container" flex="jc-sa ac-c">
 
       <ProjectCard className="hovering-1 top-0 left-0" cardImg={ neuropypeImage }>
-        <canvas id="canv" className=""/>
+        <div className="card-title">Neruopype</div>
       </ProjectCard>
     </main>
   )
