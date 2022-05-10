@@ -6,14 +6,14 @@ export default function(oldProps) {
   const { isOpen, children, props } = propSetup(oldProps, 'children', 'isOpen' )
 
   const transition = useTransition(isOpen, {
-     from: {
-       opacity: 0
-     },
-      enter: {
-        opacity: 1
+    from: {
+      y: innerHeight,
+    },
+    enter: {
+      y: 15,
     },
     leave: {
-      opacity: 0
+      y: innerHeight,
     }
   })
 

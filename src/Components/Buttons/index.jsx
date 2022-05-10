@@ -1,4 +1,7 @@
 import Button from './Button'
-import Hamburger from "./Hamburger";
+import Hamburger from './Hamburger'
+import SpinningIcon from './SpinningIcon'
 
-export { Button, Hamburger }
+
+
+export { Button, Hamburger, SpinningIcon }
