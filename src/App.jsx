@@ -1,15 +1,35 @@
-import logo from './assets/images/logo.svg'
-import './App.css'
+import './assets/styles/main.scss'
+import { useState, useEffect } from 'react'
+import { Navbar } from "./Components/Navbar";
+import { LoadingScreen } from "./Components/LoadingScreen";
+import { Pages } from './Components/Pages'
 
-function App() {
+let finishedFirstRender = false
+
+export default function App() {
+  const [ loading, setLoading ] = useState(true)
+  const [ currentPage, setPage ] = useState('Projects')
+
+  const changePage = page => {
+    setPage(page)
+  }
+
+  useEffect(() => {
+    if(!finishedFirstRender) {
+      finishedFirstRender = true
+      setTimeout(() => {
+        setLoading(false)
+      }, 2000)
+    }
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="Jon Taylor's logo" />
-        <p>Work in progress.  Updates coming soon!</p>
-      </header>
+    <div>
+      <Navbar
+        currentPage={currentPage}
+        changePage={changePage}
+      />
+      <Pages currentPage={currentPage} />
     </div>
   )
 }
-
-export default App

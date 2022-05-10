@@ -1,0 +1,54 @@
+@mixin mq($size) {
+  @if $size == sm { @media (max-width: $mqSM) { @content } }
+  @else if $size == md { @media (min-width: $mqMD) { @content } }
+  @else if $size == lg { @media (min-width: $mqLG) { @content } }
+  @else if $size == xl { @media (min-width: $mqXL) { @content } }
+}
+
+@mixin create-attribute-rule($attributeName, $value, $key, $prop, $val) {
+  [#{$attributeName}*="#{$value}-#{$key}"] {
+    #{$prop}: $val;
+  }
+}
+
+@mixin attr-values($attributeName, $map) {
+  @each $value, $propMap in $map {
+    @each $prop, $valMap in $propMap {
+      @each $key, $val in $valMap {
+        @include create-attribute-rule($attributeName, $value, $key, $prop, $val)
+      }
+    }
+  }
+}
+
+@mixin mq-attr-values($attributeName, $map, $mq) {
+  @include mq($mq) {
+    @each $value, $propMap in $map {
+      @each $prop, $valMap in $propMap {
+        @each $key, $val in $valMap {
+          @include create-attribute-rule($attributeName, '#{$value}@#{$mq}', $key, $prop, $val)
+        }
+      }
+    }
+  }
+}
+
+@mixin attribute-values($attributeName, $map, $useMQ: true) {
+  $mqList: get-mq-list($useMQ);
+  @each $mq in $mqList {
+    @if $mq == '' {
+      @include attr-values($attributeName, $map);
+    } @else {
+      @include mq-attr-values($attributeName, $map, $mq);
+    }
+  }
+}
+
+@mixin attr-count-for($ticks, $amount, $attr, $prop, $name, $measure) {
+  @for $i from 1 through $ticks {
+    $j: $i * $amount;
+    [#{$attr}*="#{$name}-#{$j}"] {
+      #{$prop}: #{$j}#{$measure};
+    }
+  }
+}
