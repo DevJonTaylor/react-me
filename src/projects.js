@@ -1,6 +1,7 @@
 const JS = 'javascriptTag',
   Node = 'backendTag',
   CSS = 'cssTag',
+  CLIENT = 'clientTag',
   JSX = 'reactTag',
   SVELTE = 'svelteTag',
   VUE = 'vueTag',
@@ -101,5 +102,15 @@ export default [
     github: 'https://github.com/DevJonTaylor/plantazzle/',
     deployed: 'https://salty-dawn-76084.herokuapp.com/',
     tags: [ JS, HTML5, Node ]
+  },
+  {
+    image: 'neuropype.png',
+    title: 'Subscription Management System',
+    desc: [
+      'Management of user base was located in Keygen.sh, manipulating Joomla\'s built-in so that after authentication they were able to access the forums as they were a Joomla user.  Subscription payments were performed from Stripe.  Was a very challenging project.',
+      'From the backend I created a token system that managed Stripe payments and Keygen\'s authorization.  I created a Software Development Kit(SDK) to work with Keygen as they did not have a PHP kit available that worked with licenses.',
+      'I used Vue as the frontend framework and really nice and easy to work with.  As my first Vue project I wish I would have discovered Vuex before hand.  It would have made my life so much easier instead of performing prop passing.'
+    ],
+    tags: [ JS, VUE, PHP, CLIENT ]
   }
 ]
