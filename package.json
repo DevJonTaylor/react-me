@@ -11,6 +11,8 @@
     "@emotion/core": "^10.3.1",
     "@emotion/css": "^10.0.27",
     "@emotion/react": "^11.9.0",
+    "@geist-ui/core": "^2.3.8",
+    "@iconify/icons-simple-icons": "^1.2.12",
     "@react-spring/parallax": "^9.4.4",
     "@react-spring/three": "^9.4.4",
     "@react-three/fiber": "^8.0.12",

@@ -1,8 +1,14 @@
+import { Grid, Card } from '@geist-ui/core'
+
 export default function() {
   return (
-    <section>
+    <article>
       <h1>Projects</h1>
-
-    </section>
+      <Grid.Container gap={2} justify="center">
+        <Grid xs={6}>
+          <Card shadow width="100%"></Card>
+        </Grid>
+      </Grid.Container>
+    </article>
   )
 }
