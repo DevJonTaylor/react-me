@@ -1,0 +1,203 @@
+@import "helpers";
+@import "sizes";
+
+$arenaImg: '/src/assets/images/arena.png';
+$cardImg: '/src/assets/images/card.svg';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face{
+  font-family:Belwe Bold;
+  src:url(/src/assets/fonts/Belwe-Bold.eot);
+  src:url(/src/assets/fonts/Belwe-Bold.eot?#iefix) format("embedded-opentype"),
+      url(/src/assets/fonts/Belwe-Bold.woff) format("woff"),
+      url(/src/assets/fonts/Belwe-Bold.ttf) format("truetype");
+  font-weight:700;
+  font-style:normal;
+  font-stretch:normal;
+}
+
+@mixin bgImg($url, $position: bottom) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: $position;
+}
+
+.App-header {
+  @include bgImg($arenaImg, center);
+  height: 100vh;
+  font-size: calc(10px + 2vmin);
+  .logo {
+    z-index: 2;
+  }
+}
+
+.hovering-1 {
+  animation-delay: 0s !important;
+}
+.hovering-2 {
+  animation-delay: 0.1s !important;
+}
+.hovering-3 {
+  animation-delay: 0.6s !important;
+}
+.hovering-4 {
+  animation-delay: 0.3s !important;
+}
+.hovering-5 {
+  animation-delay: 0.5s !important;
+}
+
+.outer-card {
+  animation: 3.2s ease-in-out 0s infinite running hovering;
+  position: relative;
+  transition: all .2s ease-out;
+  transform: scale(.9);
+  cursor: pointer;
+  resize: both;
+  &:active {
+    cursor: grabbing;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    opacity: .7;
+    width: 286px;
+    height: 395px;
+    @include bgImg($cardImg);
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform: translate(-11%, -7%) scale(1.04);
+    filter: brightness(10) sepia(1) hue-rotate(0deg) saturate(1) blur(10px);
+    background-color: #ffffff10;
+    z-index: 1;
+  }
+  &::after {
+    animation: 3s ease-in-out 0s infinite running glowingGreen;
+    content: "";
+    position: absolute;
+    width: 286px;
+    height: 395px;
+    @include bgImg($cardImg);
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-out;
+    transform: translate(-11%, -7%) scale(1.1);
+    filter: brightness(2) sepia(1) hue-rotate(420deg) saturate(50) blur(2px) contrast(12);
+  }
+}
+
+.card-container {
+  width: 80%;
+  height: 100vh;
+}
+
+.card {
+  content: '';
+  position: absolute;
+  width: 286px;
+  height: 395px;
+  flex-shrink: 0;
+  @include bgImg($cardImg);
+  transform: translate(-32px, -27px);
+  z-index: 1;
+}
+
+.inner-card {
+  position: absolute;
+  width: 230px;
+  top: -13px;
+  left: 0;
+  content: '';
+  height: 220px;
+  border-radius: 33em;
+  backdrop-filter: grayscale(2);
+}
+
+.card-title {
+  font-family: Belwe Bold,Georgia,Times,Times New Roman,serif;
+  z-index: 100;
+  position: absolute;
+  top: 180px;
+  left: 10px;
+  font-weight: 700;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  text-shadow:
+          #000 2px 0 0,
+          #000 1.75517px .95885px 0,
+          #000 1.0806px 1.68294px 0,
+          #000 .14147px 1.99499px 0,
+          #000 -.83229px 1.81859px 0,
+          #000 -1.60229px 1.19694px 0,
+          #000 -1.97998px .28224px 0,
+          #000 -1.87291px -.70157px 0,
+          #000 -1.30729px -1.5136px 0,
+          #000 -.42159px -1.95506px 0,
+          #000 .56732px -1.91785px 0,
+          #000 1.41734px -1.41108px 0,
+          #000 1.92034px -.55883px 0;
+  transform: matrix3d(1.1, -0.15, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 39, -10, 0, 1);
+  transform-origin: 39% 0;
+}
+
+.card-title > div > [class^="card-title-letter-"] {
+  display: inline;
+  position: absolute;
+}
+
+@keyframes hovering {
+  0% {
+    transform: scale(90%);
+  }
+  50% {
+    transform: scale(80%);
+  }
+  100% {
+    transform: scale(90%);
+  }
+}
+
+@keyframes glowingGreen {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glowingWhite {
+  0% {
+    opacity: .5;
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    opacity: .5;
+  }
+}
+
+//html, body {
+//  margin: 0;
+//  height: 100%;
+//}
+
+#scene {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}

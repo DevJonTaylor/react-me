@@ -1,0 +1,59 @@
+[flex] {
+  display: flex
+}
+
+[flex*="jc-c"] {
+  justify-content: center;
+}
+
+[flex*="jc-sb"] {
+  justify-content: space-between;
+}
+
+[flex*="jc-se"] {
+  justify-content: space-evenly;
+}
+
+[flex*="jc-sa"] {
+  justify-content: space-around;
+}
+
+[flex*="ac-c"] {
+  align-content: center;
+}
+
+[flex*="fd-c"] {
+  flex-direction: column;
+}
+
+[flex*="fd-r"] {
+  flex-direction: row;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.cover-screen {
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: '';
+  height: 100vh;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(5px);
+}
