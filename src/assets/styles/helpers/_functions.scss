@@ -1,0 +1,27 @@
+@use "sass:map";
+
+@function get-mq-list($mq) {
+  @if $mq == true {
+    @return ("", sm, md, lg, xl);
+  }
+  @return ("");
+}
+
+/*$values: (
+        jc: ( justify-content: ( c: center, sb: space-between )),
+        ji: ( justify-items: ( c: center, sb: space-between )),
+        js: ( justify-self: ( c: center, sb: space-between )),
+        ac: ( align-content: ( c:center )),
+        ai: ( align-items: ( c:center )),
+        as: ( align-self: ( c:center ))
+);*/
+// flex="jc-c" | display: flex; justify-content: center;
+@function attr-count-list($ticks, $countBy, $propName, $name, $measurement: px) {
+  $returnMe: ();
+  @for $i from 1 through $ticks {
+    $value: $i * $countBy;
+    $returnMe: map.set($returnMe, $value, #{$value}#{$measurement})
+  }
+
+  @return ($name: ( $propName: $returnMe ));
+}

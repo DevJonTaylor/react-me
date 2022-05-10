@@ -1,0 +1,40 @@
+@include mq(sm) {
+  .navbar {
+    height: $smNavbarHeight;
+    background-color: $color2;
+    display: flex;
+    justify-content: center;
+
+    .nav-brand {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 15px;
+      fill: $color5;
+    }
+  }
+
+  #menu-blinds {
+    top: $smNavbarHeight; left: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    background-image: linear-gradient(180deg, $color2, $color3);
+    color: $color5;
+    font-size: xxx-large;
+    width: 100%;
+    height: $smPageHeight;
+    ul {
+      list-style: none;
+
+      li[active] {
+        border-bottom: solid $color1;
+      }
+    }
+  }
+}
