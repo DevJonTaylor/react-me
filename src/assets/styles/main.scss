@@ -13,3 +13,9 @@
 @import 'components/menu';
 @import 'components/pages';
 @import 'components/card';
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+[class*="btn-outline"]:hover {
+  background-color: transparent;
+}

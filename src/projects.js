@@ -1,5 +1,5 @@
 const JS = 'javascriptTag',
-  Node = 'backendTag',
+  NODE = 'backendTag',
   CSS = 'cssTag',
   CLIENT = 'clientTag',
   JSX = 'reactTag',
@@ -9,7 +9,7 @@ const JS = 'javascriptTag',
   HTML5 = 'semanticHtmlTag'
 
 
-export default [
+const projects = [
   {
     image: "horiseon.png",
     title: "Horiseon Code Refactor",
@@ -101,7 +101,7 @@ export default [
     ],
     github: 'https://github.com/DevJonTaylor/plantazzle/',
     deployed: 'https://salty-dawn-76084.herokuapp.com/',
-    tags: [ JS, HTML5, Node ]
+    tags: [ JS, HTML5, NODE ]
   },
   {
     image: 'neuropype.png',
@@ -114,3 +114,44 @@ export default [
     tags: [ JS, VUE, PHP, CLIENT ]
   }
 ]
+
+const tags = [
+  {
+    name: JS,
+    isOn: true
+  },
+  {
+    name: NODE,
+    isOn: true
+  },
+  {
+    name: CSS,
+    isOn: true
+  },
+  {
+    name: CLIENT,
+    isOn: true
+  },
+  {
+    name: JSX,
+    isOn: true
+  },
+  {
+    name: SVELTE,
+    isOn: true
+  },
+  {
+    name: VUE,
+    isOn: true
+  },
+  {
+    name: PHP,
+    isOn: true
+  },
+  {
+    name: HTML5,
+    isOn: true
+  }
+]
+
+export { projects, tags, JS, NODE, CSS, CLIENT, JSX, SVELTE, VUE, PHP, HTML5 }

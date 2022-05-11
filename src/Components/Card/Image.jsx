@@ -1,10 +1,10 @@
 import { bsClasses, addToClass, propSetup } from '../Helpers'
 
 export default function(p) {
-  const { children, props } = propSetup(p, 'children')
+  const { props } = propSetup(p)
   bsClasses(props)
-  addToClass(props, 'card')
+  addToClass(props, 'card-img-top')
   return (
-    <div {...props}>{children}</div>
+    <img {...props} />
   )
 }

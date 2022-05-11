@@ -1,11 +1,11 @@
 @include mq(sm) {
-  .navbar {
+  .djt-navbar {
     height: $smNavbarHeight;
     background-color: $color2;
     display: flex;
     justify-content: center;
 
-    .nav-brand {
+    .djt-nav-brand {
       display: none;
     }
 
@@ -28,7 +28,7 @@
     color: $color5;
     font-size: xxx-large;
     width: 100%;
-    height: $smPageHeight;
+    height: $smPageHeight + 20vh;
     ul {
       list-style: none;
 
