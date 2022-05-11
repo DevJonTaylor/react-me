@@ -16,8 +16,8 @@ export default function(oldProps) {
 
   const menuItems = [ 'Projects', 'About Me', 'Contact Me' ]
   return (
-    <nav className="navbar" {...props}>
-      <Slide className="nav-brand" to={0} duration={500} from={innerWidth}>
+    <nav className="djt-navbar" {...props}>
+      <Slide className="djt-nav-brand" to={0} duration={500} from={innerWidth}>
         <Logo />
       </Slide>
       <SpinningIcon toggle={toggle} isOpen={isOpen} className="hamburger" />

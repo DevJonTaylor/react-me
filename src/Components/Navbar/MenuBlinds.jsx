@@ -10,10 +10,13 @@ export default function(oldProps) {
       y: innerHeight,
     },
     enter: {
-      y: 15,
+      y: 0,
     },
     leave: {
       y: innerHeight,
+    },
+    config: {
+      mass: 3
     }
   })
 
