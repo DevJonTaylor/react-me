@@ -5,8 +5,8 @@
 	 style="enable-background:new 0 0 229 55.7;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
-	.st1{fill:url(#svg_3_00000011737909759841111310000015680972871358457507_);}
-	.st2{fill:url(#svg_4_00000176738141866662039470000011310097580983969429_);}
+	.st1{fill:url(#svg_3_00000066488304985854289210000008409690600073299340_);}
+	.st2{fill:url(#svg_4_00000106852737652266845150000010041372783910294153_);}
 </style>
 <g>
 	<g id="_x37_b57a090-5867-4e63-b447-16d53c5324c1" transform="matrix(1.80932 0 0 1.80932 99.821 116.072)">
@@ -98,18 +98,18 @@
 	</g>
 	<g id="fe52f8f1-4021-448e-b7aa-2231e1fcad70" transform="matrix(1.52479 0 0 1.52479 40 125.603)">
 		
-			<linearGradient id="svg_3_00000087383041499662359210000016771142968270493060_" gradientUnits="userSpaceOnUse" x1="-121.5597" y1="204.9416" x2="-120.5597" y2="204.9416" gradientTransform="matrix(22.2905 11.5155 10.3942 -24.6951 564.3824 6391.8418)">
+			<linearGradient id="svg_3_00000156583077912931166460000010758582017869019524_" gradientUnits="userSpaceOnUse" x1="-121.5597" y1="204.9416" x2="-120.5597" y2="204.9416" gradientTransform="matrix(22.2905 11.5155 10.3942 -24.6951 564.3824 6391.8418)">
 			<stop  offset="0" style="stop-color:#EB6E00"/>
 			<stop  offset="1" style="stop-color:#F3BCE6"/>
 		</linearGradient>
-		<path id="svg_3" style="fill:url(#svg_3_00000087383041499662359210000016771142968270493060_);" d="M-13.4-59.5l8.1,4.5l8.1-4.5
+		<path id="svg_3" style="fill:url(#svg_3_00000156583077912931166460000010758582017869019524_);" d="M-13.4-59.5l8.1,4.5l8.1-4.5
 			v-8.9l-8.1-4.5l-8.1,4.5V-59.5z"/>
 		
-			<linearGradient id="svg_4_00000159458590260489769880000014430355442945684916_" gradientUnits="userSpaceOnUse" x1="-124.5176" y1="207.3736" x2="-123.5176" y2="207.3736" gradientTransform="matrix(44.2217 20.6209 20.6209 -44.2217 1203.9236 11665.0957)">
+			<linearGradient id="svg_4_00000070104835787600491900000012930565316707134645_" gradientUnits="userSpaceOnUse" x1="-124.5176" y1="207.3736" x2="-123.5176" y2="207.3736" gradientTransform="matrix(44.2217 20.6209 20.6209 -44.2217 1203.9236 11665.0957)">
 			<stop  offset="0" style="stop-color:#EB6E00"/>
 			<stop  offset="1" style="stop-color:#F3BCE6"/>
 		</linearGradient>
-		<path id="svg_4" style="fill:url(#svg_4_00000159458590260489769880000014430355442945684916_);" d="M9-80h-32v32H9L4-53.2h-21.9
+		<path id="svg_4" style="fill:url(#svg_4_00000070104835787600491900000012930565316707134645_);" d="M9-80h-32v32H9L4-53.2h-21.9
 			v-21.7H4C4-74.8,9-80,9-80z"/>
 	</g>
 	<g id="a43dea47-eb18-4e4d-aadd-4122830f6a0d" transform="matrix(0.573463 0 0 0.573463 101.587 159.538)">

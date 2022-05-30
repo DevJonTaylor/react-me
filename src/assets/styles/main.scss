@@ -1,21 +1,5 @@
-@import 'root';
-@import 'helpers/variables';
-@import 'helpers/functions';
-@import 'helpers/mixins';
+@import 'particles';
 
-@import 'library/flex';
-@import 'library/color';
-@import 'library/wh';
-@import 'library/text';
-
-@import 'components/body';
-@import 'components/buttons';
-@import 'components/menu';
-@import 'components/pages';
-@import 'components/card';
-
-@import '../node_modules/bootstrap/scss/bootstrap';
-
-[class*="btn-outline"]:hover {
-  background-color: transparent;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
