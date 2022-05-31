@@ -1,6 +1,5 @@
 import addClass from '../addClass'
 import useProps from '../useProps'
-import usePrefixColors from '../usePrefixColors'
 
 export default function(props) {
   const attributes = {
@@ -11,7 +10,5 @@ export default function(props) {
     active: 'btn-active', disabled: 'btn-disabled'
   }
   addClass('btn', props)
-
-  usePrefixColors('btn', props)
   useProps(attributes, props)
 }

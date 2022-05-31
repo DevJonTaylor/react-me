@@ -6,7 +6,7 @@ export default function ({ darkMode, toggle, text, ...props }) {
   addClass('swap swap-rotate', props)
 
   return (
-    <div onClick={toggle} { ...props } >
+    <div onClick={() => toggle()} { ...props } >
       <input type="checkbox" checked={darkMode}  onChange={() => toggle()} />
 
       { text ? ( <span className="swap-off ml-10">Light Mode</span>) : '' }

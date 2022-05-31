@@ -31,9 +31,9 @@ export default function(prefix, props) {
   const attributes = {}
 
   for(const color of colors) {
-    const key = camelCase(`${prefix.toLowerCase()}-${color}`)
+    const key = camelCase(color)
 
-    attributes[key] = kebabCase(key)
+    attributes[key] = kebabCase(`${prefix}-${key}`)
   }
 
   useProps(attributes, props)

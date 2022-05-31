@@ -10,30 +10,49 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 export default function App() {
   const [ isDark, toggle ] = useTheme()
   const [ Small, Medium, Large, Resp ] = useResponsive()
-  const bubblesConfig = {
-    backgroundMask: {
-      enable: true,
-      cover: {
-        color: !isDark ? '#fff' : 'rgba(0,0,0,0.14)', opacity: 1
-      }
-    },
-    background: {
-      color: !isDark ? '#eee' : '#111',
-      image: `url('${image}')`,
-      position: 'center',
-      repeat: 'repeat',
-    },
-  }
 
   return (
     <Fragment>
       <BrowserRouter>
         <Navigation isDark={isDark} toggleDark={toggle}/>
         <Resp small medium>
-          <Bubbles config={ { ...bubblesConfig, backgroundSize: '100%' } } />
+          <Bubbles config={
+            {
+              backgroundMask: {
+                enable: true,
+                cover: {
+                  color: !isDark ? '#fff' : 'rgba(0,0,0,0.14)',
+                  opacity: 1
+                }
+              },
+              background: {
+                color: !isDark ? '#eee' : '#111',
+                image: `url('${image}')`,
+                position: 'center',
+                repeat: 'repeat',
+                size: '50%'
+              }
+            }
+          } />
         </Resp>
         <Large>
-          <Bubbles config={ { ...bubblesConfig, backgroundSize: '50%' } } />
+          <Bubbles config={
+            {
+              backgroundMask: {
+                enable: true,
+                cover: {
+                  color: !isDark ? '#fff' : 'rgba(0,0,0,0.14)', opacity: 1
+                }
+              },
+              background: {
+                color: !isDark ? '#eee' : '#111',
+                image: `url('${image}')`,
+                position: 'center',
+                repeat: 'no-repeat',
+                size: '50%'
+              }
+            }
+          } />
         </Large>
         <main>
           <Routes>

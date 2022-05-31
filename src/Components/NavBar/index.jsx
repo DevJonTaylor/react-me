@@ -6,7 +6,7 @@ import { useResponsive } from '../../Hooks'
 
 function NavigationLg({ ...props }) {
   return (
-    <NavBar>
+    <NavBar className="flex flex-wrap w-full">
       <Bar />
     </NavBar>
   )
